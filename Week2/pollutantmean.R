@@ -32,7 +32,7 @@ pollutantmean <- function(directory, pollutant = "sulfate", id = 1:332) {
     na_removed <- current_file[!is.na(current_file[, pollutant]), pollutant]
     mean_vector <- c(mean_vector, na_removed)
   }
-  result <- mean(mean_vector)
+  result <- round(mean(mean_vector),3)
   return(result) 
 }
 
